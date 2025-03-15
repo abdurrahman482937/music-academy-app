@@ -1,5 +1,6 @@
 import FeaturedCourses from "@/components/FeaturedCourses";
 import Hero from "@/components/Hero";
+import Instructor from "@/components/Instructor";
 import UpcomingWebinars from "@/components/UpcomingWebinars";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero></Hero>
       <FeaturedCourses></FeaturedCourses>
       <UpcomingWebinars></UpcomingWebinars>
+      <Instructor></Instructor>
     </main>
   );
 }

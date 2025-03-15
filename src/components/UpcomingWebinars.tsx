@@ -69,7 +69,7 @@ export default function UpcomingWebinars() {
             }))}
           ></HoverEffect>
         </div>
-        <div className="mt-20 text-center">
+        <div className="mt-10 text-center">
           <Link href="/courses">
             <button className="px-8 py-3 font-semibold border rounded dark:border-zinc-800 dark:text-zinc-200 cursor-pointer">
               View All Webinars
