@@ -50,7 +50,7 @@ export default function UpcomingWebinars() {
     },
   ];
   return (
-    <div className="p-12 bg-zinc-950">
+    <div className="p-12 bg-zinc-950/80">
       <div className="max-w-7xl mx-auto px-4  sm:px-6">
         <div className="text-center">
           <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">
@@ -65,7 +65,8 @@ export default function UpcomingWebinars() {
             items={featuredWebinars.map((webinar) => ({
               title: webinar.title,
               description: webinar.description,
-              link: "/"
+              link: "/",
+              key: webinar.slug
             }))}
           ></HoverEffect>
         </div>
