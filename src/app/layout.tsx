@@ -36,11 +36,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative w-full flex items-center justify-center">
-          <Navbar />
+            <Navbar />
           </div>
           {children}
         </ThemeProvider>
       </body>
     </html>
   );
-} 
+}
