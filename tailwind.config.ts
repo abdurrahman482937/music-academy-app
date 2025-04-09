@@ -1,7 +1,11 @@
-import { Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+function svgToDataUri(svg: string): string {
+  return `data:image/svg+xml,${encodeURIComponent(svg.replace(/\s+/g, " ").trim())}`;
+}
 
 function addVariablesForColors({ addBase, theme }: any) {
-  const allColors = flattenColorPalette(theme("colors"));
+  const allColors = flattenColorPalette(theme("colors") || {});
   const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, value]) => [`--${key}`, value])
   );
@@ -45,11 +49,11 @@ const config: Config = {
       keyframes: {
         spotlight: {
           "0%": {
-            opacity: 0,
+            opacity: "0",
             transform: "translate(-72%, -62%) scale(0.5)",
           },
           "100%": {
-            opacity: 1,
+            opacity: "1",
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
